@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1050_MidTerm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool keepLooping = true;
+            while (keepLooping)
+            {
+                Console.WriteLine("This will Never End");
+            }
+            int number =1;
+            while (number < 128)
+            {
+                int multiply = number * 2;
+                
+                Console.WriteLine("[" + multiply + "]");
+                number = multiply;
+            }
+            int number1 = 50;
+           while (number1 > 1)
+            {
+                number1--;
+                if (number1 == 1)
+                {
+                    Console.WriteLine(number1);
+                    break;
+                }
+                    Console.Write(number1 + ",");
+            
+            }
+            while(number < 22)
+            {
+                if(number %  2 == 0)
+                {
+                    Console.Write("   ");
+                }
+                else
+                {
+                    Console.Write(number);
+                }
+                number++;
+            }
+            
+            int n = 8;
+            int i = 10;
+            do                  
+            {
+                Console.WriteLine("*");   /*The difference between a do while and a while loop is that 
+                                          the do while loop will always run at least one time no matter what statement is being compared.
+                                          Like with this example the while loop donesn't run as the statement isn't true. I is bigger then N.
+                                          But we use a do while loop so even though the statement doesn't allow the while loop to run we still 
+                                          are able to run the code at least one time.*/
+             i++;
+          } while (i < n);
+          
+            bool icyRain = false;
+            bool tornadoWarning = false;
+            if(!tornadoWarning && !icyRain)
+            {
+                Console.WriteLine("Lets go outside!");
+            }
+           
+            int layers = 5;
+            int enters;
+            int Number;
+         
+            for (int i = 5; i <= layers; i++) 
+            {
+              
+                for (enters = 1; enters <= (layers - i); enters++)  
+                    Console.Write(" ");
+                for (Number = 1; Number <= i; Number++) 
+                    Console.Write(Number);
+                for (Number = (i - 1); Number >= 1; Number--)  
+                    Console.Write(Number);
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+       
+
+    }
+}
